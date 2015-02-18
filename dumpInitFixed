@@ -1,0 +1,174 @@
+SVN-fs-dump-format-version: 2
+
+UUID: c88ec2e0-6d1a-0410-bfb1-b076d2d10ec3
+
+Revision-number: 0
+Prop-content-length: 229
+Content-length: 229
+
+K 18
+svn:sync-from-uuid
+V 36
+c88ec2e0-6d1a-0410-bfb1-b076d2d10ec3
+K 24
+svn:sync-last-merged-rev
+V 5
+23711
+K 8
+svn:date
+V 27
+2006-08-07T13:58:51.447150Z
+K 17
+svn:sync-from-url
+V 38
+file:///nfs/classic/sf-svn/m/ma/matsim
+PROPS-END
+
+Revision-number: 1
+Prop-content-length: 112
+Content-length: 112
+
+K 7
+svn:log
+V 4
+test
+K 10
+svn:author
+V 13
+vsp_strippgen
+K 8
+svn:date
+V 27
+2006-08-07T14:05:22.628862Z
+PROPS-END
+
+Node-path: testfolder
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Revision-number: 2
+Prop-content-length: 146
+Content-length: 146
+
+K 7
+svn:log
+V 44
+initial repository layout and initial README
+K 10
+svn:author
+V 7
+mrieser
+K 8
+svn:date
+V 27
+2007-11-23T17:13:57.648110Z
+PROPS-END
+
+Node-path: .project
+Text-content-md5: 3b2e026719f52fb3667ba38a514da2e1
+Node-action: add
+Text-content-sha1: fc1ac4f83e6c2c05746dbede0ba57f8fb7ba65a5
+Node-kind: file
+Prop-content-length: 10
+Text-content-length: 209
+Content-length: 219
+
+PROPS-END
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>sourceforge_root</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+	</natures>
+</projectDescription>
+
+
+Node-path: README
+Text-content-md5: 766d481f4da002dca9e747481c04a952
+Node-action: add
+Text-content-sha1: e77da8d41d791104d8f734a232857ab061ab7959
+Node-kind: file
+Prop-content-length: 10
+Text-content-length: 369
+Content-length: 379
+
+PROPS-END
+This repository contains files for the MATSim project.
+
+Copyright (C) 2006, 2007 by Kai Nagel, Kay W. Axhausen, others who
+actually wrote it, the Technische Universitaet Berlin (TU-Berlin), 
+and the Swiss Federal Institute of Technology Zurich (ETHZ).
+
+Please see the files COPYING, LICENSE and WARRANTY in the trunks of
+the subprojects for more detailed information.
+ 
+
+Node-path: trunk
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: branches
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: tags
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: branches/matsim
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: tags/matsim
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: trunk/matsim
+Node-action: add
+Node-kind: dir
+Prop-content-length: 10
+Content-length: 10
+
+PROPS-END
+
+
+Node-path: testfolder
+Node-action: delete
+Content-length: 0
+
+
+
