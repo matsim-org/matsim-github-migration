@@ -1,0 +1,25 @@
+branchify matsim/trunk matsim/branches/* matsim/tags/* contrib/branches/* contrib/tags/* contrib/trunk playgrounds/trunk playgrounds/branches/* playgrounds/tags/*
+branchify_map @^([^/]+)/(.*)/$@heads/\1_\2@
+read <matsim.svn
+prefer git
+branch root rename master
+branch matsim/tags/matsim-0.6.1/ delete
+branch matsim/tags/trunkRevision997/ delete
+branch matsim/tags/release0.1.0/ delete
+branch matsim/tags/release0.1.1/ delete
+branch matsim/tags/release0.2.0/ delete
+branch matsim/tags/release0.4.0/ delete 
+branch matsim/tags/release0.4.1/ delete 
+branch matsim/tags/release0.6.0/ delete
+branch matsim/tags/release0.6.1/ delete
+branch playgrounds/tags/hkluepfel_2014-02-06/ delete
+rebuild matsim.git
+---
+
+reposurgeon: exporting...fatal: Expected 'data n' command, found: from :167084
+fast-import: dumping crash report to .git/fast_import_crash_64160
+...(1439.17 sec) aborted by error.
+reposurgeon: fatal exception in popen_or_die.
+reposurgeon: export error: [Errno 32] Broken pipe
+
+keine lust mehr
