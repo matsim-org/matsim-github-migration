@@ -35,8 +35,49 @@ echo "=== filtering svn dump"
 date
 
 # "--pattern" requires SVN 1.7+, and for some reason the simple paths are interpreted different when --pattern is used, thus make two calls
-svndumpfilter exclude deqsim matsim/trunk/libs < dumpCode > dumpFiltered.tmp
-svndumpfilter exclude --pattern "*.jar" "*.zip" < dumpFiltered.tmp > dumpFiltered
+svndumpfilter exclude \
+	deqsim \
+	matsim/trunk/libs \
+	matsim/trunk/src/playground/wrashid/test/test6/deq_events.txt \
+	matsim/trunk/src2/archive/org \
+	matsim/trunk/src2/archive/playground/arvidDaniel \
+	matsim/trunk/src2/archive/playground/david \
+	matsim/trunk/src2/archive/playground/dgrether \
+	matsim/trunk/src2/archive/teach \
+	matsim/trunk/src2/experimental \
+	matsim/trunk/src/playground/fabrice/primloc/resources/zh_costs.txt \
+	contrib/trunk/matsim4urbansim/v7.5.0/EPSG.data \
+	contrib/trunk/socnetsim/examples/siouxfalls-socialnetwork/Siouxfalls_facilities.xml \
+	contrib/trunk/socnetsim/examples/siouxfalls-socialnetwork/Siouxfalls_population.xml \
+	playgrounds/trunk/dhosse/input \
+	playgrounds/trunk/dhosse/nullaccessibility_indicators.csv \
+	playgrounds/trunk/dhosse/nullbikeAccessibility_cellsize_100.0.txt \
+	playgrounds/trunk/dhosse/nullparcels.csv \
+	playgrounds/trunk/dhosse/test/linkLengthComparison \
+	playgrounds/trunk/dhosse/test/linkLengthComparison.txt \
+	playgrounds/trunk/fabrice/primloc/resources \
+	playgrounds/trunk/fhuelsmann/test/input/playground/fhuelsmann/emissions/MainTest/test1/visumnetzlink.txt \
+	playgrounds/trunk/fuerbas/src/main/java/matrix/BetweennessSchweiz \
+	playgrounds/trunk/fuerbas/src/main/java/matrix/BetweennessSchweiz_ \
+	playgrounds/trunk/fuerbas/src/main/java/matrix/linkbc.600.txt \
+	playgrounds/trunk/gregor/data \
+	playgrounds/trunk/gregor/lib \
+	playgrounds/trunk/jjoubert/lib \
+	playgrounds/trunk/jjoubert/tempInput \
+	playgrounds/trunk/kai/out \
+	playgrounds/trunk/lcrociani/src/main/resources/originalTrajectories180DegConverted.txt \
+	playgrounds/trunk/ma/input \
+	playgrounds/trunk/ma/outputCopies \
+	playgrounds/trunk/mzilske/inputs \
+	playgrounds/trunk/singapore/input \
+	playgrounds/trunk/smeintjes/tmp/zonecompletenesslog \
+	playgrounds/trunk/staheale/input \
+	playgrounds/trunk/thibautd/test/input/playground/thibautd/socnetsim/replanning/selectors/FullyExploredPlansProvider/playground.thibautd.socnetsim.replanning.selectors.EmptyIncompatiblePlansIdentifierFactory/false/jointplans.xml \
+	playgrounds/trunk/thibautd/test/input/playground/thibautd/socnetsim/replanning/selectors/FullyExploredPlansProvider/playground.thibautd.socnetsim.replanning.selectors.FewGroupsIncompatibilityFactory/true/plans.xml \
+	playgrounds/trunk/tnicolai/configs/brandenburg/ \
+	playgrounds/trunk/wrashid/test/input/playground/wrashid/sschieffer/plans20000.xml \
+	 < dumpCode > dumpFiltered.tmp
+svndumpfilter exclude --pattern "*.jar" "*.zip" "*.mvi" "*.tar" "playgrounds/trunk/*/test/output*" "playgrounds/trunk/*/output*" "wrashid/test/test1/*.xml" "wrashid/test/test2/*.xml" < dumpFiltered.tmp > dumpFiltered
 
 echo "=== modifying svn dump"
 date
@@ -50,9 +91,9 @@ date
 perl -p -e 's#-path: matsim/trunk#-path: trunk/matsim#g' dumpFiltered | \
 perl -p -e 's#-path: matsim/branches/#-path: branches/matsim-#g' | \
 perl -p -e 's#-path: matsim/tags/#-path: tags/matsim-#g' | \
-perl -p -e 's#-path: contrib/trunk#-path: trunk/contrib#g' | \
-perl -p -e 's#-path: contrib/branches/#-path: branches/contrib-#g' | \
-perl -p -e 's#-path: contrib/tags/#-path: tags/contrib-#g' | \
+perl -p -e 's#-path: contrib/trunk#-path: trunk/contribs#g' | \
+perl -p -e 's#-path: contrib/branches/#-path: branches/contribs-#g' | \
+perl -p -e 's#-path: contrib/tags/#-path: tags/contribs-#g' | \
 perl -p -e 's#-path: playgrounds/trunk#-path: trunk/playgrounds#g' | \
 perl -p -e 's#-path: playgrounds/branches/#-path: branches/playgrounds-#g' | \
 perl -p -e 's#-path: playgrounds/tags/#-path: tags/playgrounds-#g' > dumpCodeFixed
